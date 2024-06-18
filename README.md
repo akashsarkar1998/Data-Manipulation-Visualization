@@ -1,6 +1,32 @@
 # Data Manipulation and Visualization using Pandas and Matplotlib
 It is a project where I used python's powerful libraries (Pandas and Matplotlib) to manipulate data and visualize it.
 
+This project analyzes a dataset of police records of car violations using Python's pandas and matplotlib libraries. The dataset includes various details about each stop, such as the stop date, driver demographics, type of violation, and outcomes.
+
+## Project Overview
+This project aims to analyze police violation records to uncover patterns and insights about the nature of traffic stops, driver demographics, and the outcomes of these stops. The analysis includes visualizations to better understand the data and identify any significant trends.
+
+## Dataset Description
+The dataset contains the following columns:
+- `stop_date`: The date of the stop.
+- `stop_time`: The time of the stop.
+- `country_name`: The country where the stop occurred (dropped due to all null values).
+- `driver_gender`: The gender of the driver (M or F).
+- `driver_age_raw`: The raw age of the driver.
+- `driver_age`: The processed age of the driver.
+- `driver_race`: The race of the driver.
+- `violation_raw`: The raw violation description.
+- `violation`: The processed violation description.
+- `search_conducted`: Whether a search was conducted (True or False).
+- `search_type`: The type of search conducted.
+- `stop_outcome`: The outcome of the stop (e.g., citation, warning).
+- `is_arrested`: Whether the driver was arrested.
+- `stop_duration`: The duration of the stop.
+- `drugs_related_stop`: Whether the stop was drug-related.
+
+## Setup Instructions
+To set up the project locally, follow these steps:
+
 ### `Project code:`
 ```python
 import pandas as pd 
@@ -31,6 +57,8 @@ plt.ylabel('Count',fontdict=font2)
 plt.xticks(rotation=0)
 plt.show()
 ```
+## Gender Distribution for Speeding Violations
+This analysis determines if men or women are more often stopped for speeding violations.
 ![Gender_Violations](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/b4fa00f7-6e82-495a-af78-83e5099adfdc)
 
 ```python
@@ -42,6 +70,8 @@ plt.title('Search Conducted by Gender')
 plt.ylabel('')
 plt.show()
 ```
+## Search Conducted by Gender
+This analysis examines whether gender affects the likelihood of a search being conducted during a stop.
 ![gender_count](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/a2e9bab0-2227-4caa-957d-535a5b51dfc7)
 
 ```python
@@ -60,6 +90,8 @@ plt.show()
 mean_stop_duration = data['stop_duration'].mean()
 print(f'The mean value of stop_duration column is: {mean_stop_duration:.2f}')
 ```
+## Distribution of Stop Duration
+This analysis visualizes the distribution of stop durations.
 ![distrubution_of_stop_duration](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/20bd0f13-0f69-4fd7-9a6c-4a0d64ce966c)
 
 
@@ -79,6 +111,8 @@ plt.ylabel('Frequency')
 plt.legend()
 plt.show()
 ```
+## Age Distribution for Each Violation Type
+This analysis compares the age distribution of drivers for each violation type.
 ![age_violation](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/0e0f406f-bfd2-4a43-ac32-100bc5980eab)
 
 
@@ -99,6 +133,8 @@ plt.ylabel('Number of Violations')
 plt.legend(title='Violation Type')
 plt.show()
 ```
+## Monthly Trends in Violations
+This analysis identifies seasonal trends in violations by month.
 ![monthly_trends_violation](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/76badf69-4bc5-428d-b649-0a1d87748a37)
 
 
@@ -116,6 +152,8 @@ plt.legend(title='Violation Type')
 plt.xticks(rotation=45)
 plt.show()
 ```
+## Violation Type by Race
+This analysis examines the distribution of violation types by the race of the driver.
 ![violation_type_race](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/38219e80-aa35-41a6-a638-655ea78c172d)
 
 
@@ -133,6 +171,8 @@ plt.legend(title='Search Conducted', labels=['No', 'Yes'])
 plt.xticks(rotation=45)
 plt.show()
 ```
+## Search Conducted vs. Violation Type
+This analysis explores if certain types of violations are more likely to result in a search.
 ![search_conducted_by_violation_type](https://github.com/akashsarkar1998/Data-Manipulation-Visualization/assets/32842719/579f58c9-b363-4dd7-95f3-907a4b9fcf4a)
 
 
